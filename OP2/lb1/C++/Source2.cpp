@@ -3,29 +3,30 @@
 #include <fstream>
 #include "Header.h"
 
-void outText(std::string fileName)                                                       //функція запису/перезапису тексту у файлі; якщо файл відсутній, то він створюється
+void outText(std::string fileName)                                                       //ГґГіГ­ГЄГ¶ВіГї Г§Г ГЇГЁГ±Гі/ГЇГҐГ°ГҐГ§Г ГЇГЁГ±Гі ГІГҐГЄГ±ГІГі Гі ГґГ Г©Г«Ві; ГїГЄГ№Г® ГґГ Г©Г« ГўВіГ¤Г±ГіГІГ­ВіГ©, ГІГ® ГўВіГ­ Г±ГІГўГ®Г°ГѕВєГІГјГ±Гї
 {
     std::ofstream outFile(fileName);
-    std::string str;                                                                     //допоміжний "буферний" рядок
-    while (true)
+    std::string str;                                                                     //Г¤Г®ГЇГ®Г¬ВіГ¦Г­ГЁГ© "ГЎГіГґГҐГ°Г­ГЁГ©" Г°ГїГ¤Г®ГЄ
+    bool works = true;
+    while (works)
     {
         std::getline(std::cin, str);
-        if (str.rfind(char(25)) == (str.length() - 1))                                   //якщо заданий символ буде в кінці рядка
+        if (str.rfind(char(25)) == (str.length() - 1))                                   //ГїГЄГ№Г® Г§Г Г¤Г Г­ГЁГ© Г±ГЁГ¬ГўГ®Г« ГЎГіГ¤ГҐ Гў ГЄВіГ­Г¶Ві Г°ГїГ¤ГЄГ 
         {                                            
-            str.resize(str.length() - 1);                                                //зменшити рядок на 1 символ
-            outFile << str << '\n';                                                      //записати рядок у файл
-            break;
+            str.resize(str.length() - 1);                                                //Г§Г¬ГҐГ­ГёГЁГІГЁ Г°ГїГ¤Г®ГЄ Г­Г  1 Г±ГЁГ¬ГўГ®Г«
+            outFile << str << '\n';                                                      //Г§Г ГЇГЁГ±Г ГІГЁ Г°ГїГ¤Г®ГЄ Гі ГґГ Г©Г«
+            works = false;
         }
-        outFile << str << '\n';
+        else outFile << str << '\n';
     }
     outFile.close();
 }
 
-void inText(std::string fileName)                                                       //функція виведення тексту із файлу
+void inText(std::string fileName)                                                       //ГґГіГ­ГЄГ¶ВіГї ГўГЁГўГҐГ¤ГҐГ­Г­Гї ГІГҐГЄГ±ГІГі ВіГ§ ГґГ Г©Г«Гі
 {
     std::ifstream inFile(fileName);
-    std::string str;                                                                    //допоміжний "буферний" рядок
-    while (!inFile.eof())                                                               //поки не закінчаться рядки
+    std::string str;                                                                    //Г¤Г®ГЇГ®Г¬ВіГ¦Г­ГЁГ© "ГЎГіГґГҐГ°Г­ГЁГ©" Г°ГїГ¤Г®ГЄ
+    while (!inFile.eof())                                                               //ГЇГ®ГЄГЁ Г­ГҐ Г§Г ГЄВіГ­Г·Г ГІГјГ±Гї Г°ГїГ¤ГЄГЁ
     {
         std::getline(inFile, str);
         std::cout <<"\n"<<str;
@@ -33,9 +34,9 @@ void inText(std::string fileName)                                               
     inFile.close();
 }
 
-void newText(std::string fileName, std::string newfileName) {                          //функція створення нового текстового файлу на основі першого текстового файлу з урахуванням умов завдання
-    std::string str;                                                                   //допоміжний "буферний" рядок
-    int a;                                                                             //позиція останнього символу
+void newText(std::string fileName, std::string newfileName) {                          //ГґГіГ­ГЄГ¶ВіГї Г±ГІГўГ®Г°ГҐГ­Г­Гї Г­Г®ГўГ®ГЈГ® ГІГҐГЄГ±ГІГ®ГўГ®ГЈГ® ГґГ Г©Г«Гі Г­Г  Г®Г±Г­Г®ГўВі ГЇГҐГ°ГёГ®ГЈГ® ГІГҐГЄГ±ГІГ®ГўГ®ГЈГ® ГґГ Г©Г«Гі Г§ ГіГ°Г ГµГіГўГ Г­Г­ГїГ¬ ГіГ¬Г®Гў Г§Г ГўГ¤Г Г­Г­Гї
+    std::string str;                                                                   //Г¤Г®ГЇГ®Г¬ВіГ¦Г­ГЁГ© "ГЎГіГґГҐГ°Г­ГЁГ©" Г°ГїГ¤Г®ГЄ
+    int a;                                                                             //ГЇГ®Г§ГЁГ¶ВіГї Г®Г±ГІГ Г­Г­ГјГ®ГЈГ® Г±ГЁГ¬ГўГ®Г«Гі
 
     std::ifstream inFile1(fileName);
     std::ofstream outFile2(newfileName);
@@ -43,7 +44,7 @@ void newText(std::string fileName, std::string newfileName) {                   
     {
         std::getline(inFile1, str);
         a = str.length() - 1;
-        if ((str.rfind(' ') != a) && (str.rfind(',') != a) && (str.rfind('.') != a))  //якщо в кінці рядка відсустні пробіл, крапка чи кома
+        if ((str.rfind(' ') != a) && (str.rfind(',') != a) && (str.rfind('.') != a))  //ГїГЄГ№Г® Гў ГЄВіГ­Г¶Ві Г°ГїГ¤ГЄГ  ГўВіГ¤Г±ГіГ±ГІГ­Ві ГЇГ°Г®ГЎВіГ«, ГЄГ°Г ГЇГЄГ  Г·ГЁ ГЄГ®Г¬Г 
         {
             str = "-";                                                                    
         } 
@@ -54,17 +55,17 @@ void newText(std::string fileName, std::string newfileName) {                   
     outFile2.close();
 }
 
-void appText(std::string fileName)                                                       //функція додання тексту у файл
+void appText(std::string fileName)                                                    //ГґГіГ­ГЄГ¶ВіГї Г¤Г®Г¤Г Г­Г­Гї ГІГҐГЄГ±ГІГі Гі ГґГ Г©Г«
 {
     std::ofstream outFile(fileName,std::ios::app);
-    std::string str;                                                                     //допоміжний "буферний" рядок
+    std::string str;                                                                  //Г¤Г®ГЇГ®Г¬ВіГ¦Г­ГЁГ© "ГЎГіГґГҐГ°Г­ГЁГ©" Г°ГїГ¤Г®ГЄ
     while (true)
     {
         std::getline(std::cin, str);
-        if (str.rfind(char(25)) == (str.length() - 1))                                   //якщо заданий символ буде в кінці рядка
+        if (str.rfind(char(25)) == (str.length() - 1))                                //ГїГЄГ№Г® Г§Г Г¤Г Г­ГЁГ© Г±ГЁГ¬ГўГ®Г« ГЎГіГ¤ГҐ Гў ГЄВіГ­Г¶Ві Г°ГїГ¤ГЄГ 
         {
-            str.resize(str.length() - 1);                                                //зменшити рядок на 1 символ
-            outFile << str << '\n';                                                      //записати рядок у файл
+            str.resize(str.length() - 1);                                             //Г§Г¬ГҐГ­ГёГЁГІГЁ Г°ГїГ¤Г®ГЄ Г­Г  1 Г±ГЁГ¬ГўГ®Г«
+            outFile << str << '\n';                                                   //Г§Г ГЇГЁГ±Г ГІГЁ Г°ГїГ¤Г®ГЄ Гі ГґГ Г©Г«
             break;
         }
         outFile << str << '\n';
