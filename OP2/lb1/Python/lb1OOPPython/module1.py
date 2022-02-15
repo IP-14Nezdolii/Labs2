@@ -1,12 +1,13 @@
 def outText(name):                                                                                      ##функція запису/перезапису тексту у файлі; якщо файл відсутній, то він створюється                          
     outFile = open(name,'w')
-    while True:
+    works = True
+    while works:
         string = input()                                                                                ##допоміжний "буферний" рядок
         if (string.rfind(chr(25)) == (len(string)-1)):                                                  ##якщо заданий символ буде в кінці рядка
             string = string[0:len(string)-1]                                                            ##зменшити рядок на 1 символ
             outFile.write(string + '\n')                                                                ##записати рядок у файл
-            break
-        outFile.write(string + '\n')
+            works = False
+        else: outFile.write(string + '\n')
     outFile.close()
 
 def inText(name):                                                                                       ##функція виведення тексту із файлу
