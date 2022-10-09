@@ -1,0 +1,7 @@
+﻿  PA lb1.cpp
+C:\Users\vladi\source\repos\PA lb1\Arr.h(97,11): warning C4018: >=: несоответствие типов со знаком и без знака
+C:\Users\vladi\source\repos\PA lb1\Arr.h(99,59): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(104,47): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(112,72): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\PolySortMod.h(397,30): warning C4018: <: несоответствие типов со знаком и без знака
+  PA lb1.vcxproj -> C:\Users\vladi\source\repos\PA lb1\x64\Debug\PA lb1.exe

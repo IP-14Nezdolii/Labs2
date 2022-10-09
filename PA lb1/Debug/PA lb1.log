@@ -1,0 +1,6 @@
+﻿  PA lb1.cpp
+C:\Users\vladi\source\repos\PA lb1\Arr.h(21,18): warning C4244: =: преобразование "__int64" в "size_t", возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(25,20): warning C4244: =: преобразование "__int64" в "size_t", возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(98,29): warning C4244: аргумент: преобразование "__int64" в "size_t", возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(99,22): warning C4244: =: преобразование "__int64" в "size_t", возможна потеря данных
+  PA lb1.vcxproj -> C:\Users\vladi\source\repos\PA lb1\Debug\PA lb1.exe

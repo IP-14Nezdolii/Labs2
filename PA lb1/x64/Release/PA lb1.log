@@ -1,0 +1,11 @@
+﻿  PA lb1.cpp
+C:\Users\vladi\source\repos\PA lb1\Arr.h(92,11): warning C4018: >=: несоответствие типов со знаком и без знака
+C:\Users\vladi\source\repos\PA lb1\Arr.h(94,59): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(99,47): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\Arr.h(107,72): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb1\PolySortMod.h(396,30): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 222 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  PA lb1.vcxproj -> C:\Users\vladi\source\repos\PA lb1\x64\Release\PA lb1.exe
