@@ -1,0 +1,15 @@
+﻿  PA lb2.cpp
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(31,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(32,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(43,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(44,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(55,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(56,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(67,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(68,1): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\vladi\source\repos\PA lb2\PA lb2\Table.h(138,1): warning C4267: аргумент: преобразование из "size_t" в "_Ty"; возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+  PA lb2.vcxproj -> C:\Users\vladi\source\repos\PA lb2\x64\Debug\PA lb2.exe
